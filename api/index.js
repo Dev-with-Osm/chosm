@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Product = require("./models/Product.js");
+const cors = require("cors");
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 const port = 4000;
 
 // Connect to MongoDB database using Mongoose
